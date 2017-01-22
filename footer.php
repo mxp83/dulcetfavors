@@ -13,6 +13,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
+<?php if( !is_page(24) ) : ?>
+<!-- Quick Contact field -->
+<div class="wrapper" id="pre-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">put contact here</div>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_html( $container ); ?>">
@@ -24,13 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-						<a href="<?php echo esc_url( __( 'http://wordpress.org/',
-						'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ),
-						'WordPress' ); ?></a>
-						<span class="sep"> | </span>
-						<?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),
-						'<a href="http://understrap.com/">understrap.com</a>' ); ?>
-						(<?php printf( __( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
+						<p>&copy; 2017 Dulcet Favors | Designed by Marco Payumo</p>
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->

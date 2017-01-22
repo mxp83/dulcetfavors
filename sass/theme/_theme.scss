@@ -1,1 +1,52 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+.woocommerce {
+	ul.products {
+		li.product{
+			width:100%;
+
+			@include media-breakpoint-up(md) {
+				width:48%;
+			}
+			@include media-breakpoint-up(lg) {
+				width:22.05%;
+			}
+		}
+	}
+} 
+
+.woocommerce-page {
+	ul.products {
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+
+.wrapper-navbar {
+	.container {
+		margin: 0 15px 0 15px;
+	}
+}
+.desktop-navbar {
+	.navbar-nav {
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+		@include media-breakpoint-down(lg) {
+			display: none !important;
+		}
+	}
+}
+#navbarNavDropdown {
+	@include media-breakpoint-up(lg) {
+		display: none !important;
+	}
+}
+.cart-box {
+	position: absolute;
+    z-index: 999;
+    right: 4%;
+    width: 25%;
+    max-width:100px;
+    padding: 4px 10px;
+}

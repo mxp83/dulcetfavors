@@ -1,8 +1,8 @@
 <?php
 /**
- * Single product short description
+ * Additional Information tab
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/short-description.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/tabs/additional-information.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -11,22 +11,23 @@
  * the readme will list any important changes.
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @author        WooThemes
+ * @package       WooCommerce/Templates
+ * @version       2.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $post;
+global $product;
 
-if ( ! $post->post_excerpt ) {
-	return;
-}
+$heading = apply_filters( 'woocommerce_product_additional_information_heading', __( 'Additional Information', 'woocommerce' ) );
 
 ?>
-<div itemprop="description">
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
-</div>
+
+<?php if ( $heading ): ?>
+	<h2><?php echo $heading; ?></h2>
+<?php endif; ?>
+
+<?php $product->list_attributes(); ?>

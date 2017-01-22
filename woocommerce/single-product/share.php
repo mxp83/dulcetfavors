@@ -1,8 +1,10 @@
 <?php
 /**
- * Single product short description
+ * Single Product Share
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/short-description.php.
+ * Sharing plugins can hook into here or you can add your own code directly.
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/share.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -20,13 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $post;
-
-if ( ! $post->post_excerpt ) {
-	return;
-}
-
 ?>
-<div itemprop="description">
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
-</div>
+
+<?php do_action( 'woocommerce_share' ); // Sharing plugins can hook into here ?>

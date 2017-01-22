@@ -9401,6 +9401,42 @@ aside.widget {
 .gallery-caption {
   display: block; }
 
+.woocommerce ul.products li.product {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .woocommerce ul.products li.product {
+      width: 48%; } }
+  @media (min-width: 992px) {
+    .woocommerce ul.products li.product {
+      width: 22.05%; } }
+
+.woocommerce-page ul.products {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.wrapper-navbar .container {
+  margin: 0 15px 0 15px; }
+
+@media (min-width: 992px) {
+  .desktop-navbar .navbar-nav {
+    flex-direction: row; } }
+
+@media (max-width: 1199px) {
+  .desktop-navbar .navbar-nav {
+    display: none !important; } }
+
+@media (min-width: 992px) {
+  #navbarNavDropdown {
+    display: none !important; } }
+
+.cart-box {
+  position: absolute;
+  z-index: 999;
+  right: 4%;
+  width: 25%;
+  max-width: 100px;
+  padding: 4px 10px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

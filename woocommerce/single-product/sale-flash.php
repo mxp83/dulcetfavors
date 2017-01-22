@@ -1,8 +1,8 @@
 <?php
 /**
- * Single product short description
+ * Single Product Sale Flash
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/short-description.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/sale-flash.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -20,13 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $post;
-
-if ( ! $post->post_excerpt ) {
-	return;
-}
+global $post, $product;
 
 ?>
-<div itemprop="description">
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
-</div>
+<?php if ( $product->is_on_sale() ) : ?>
+
+	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
+
+<?php endif; ?>
