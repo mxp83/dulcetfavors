@@ -9401,33 +9401,130 @@ aside.widget {
 .gallery-caption {
   display: block; }
 
-.woocommerce ul.products li.product {
-  width: 100%; }
-  @media (min-width: 768px) {
-    .woocommerce ul.products li.product {
-      width: 48%; } }
-  @media (min-width: 992px) {
-    .woocommerce ul.products li.product {
-      width: 22.05%; } }
+body {
+  background: #1a0a53; }
 
-.woocommerce-page ul.products {
-  padding-left: 15px;
-  padding-right: 15px; }
+.jumbotron {
+  height: 40vh;
+  background: url("../img/header.jpg") center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #AB9862;
+  text-align: center; }
+  @media (min-width: 992px) {
+    .jumbotron {
+      min-height: 400px; } }
+  .jumbotron .logo {
+    width: auto;
+    height: 30vh;
+    margin-bottom: 5vh;
+    position: relative;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    @media (min-width: 992px) {
+      .jumbotron .logo {
+        min-height: 250px; } }
+  .jumbotron h2 {
+    font-size: 14pt;
+    color: white; }
+  .jumbotron .jumbo-overlay {
+    background: #1a0a53;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+
+.woocommerce .woocommerce-breadcrumb {
+  color: #AB9862; }
+  .woocommerce .woocommerce-breadcrumb a {
+    color: #6d603a; }
+
+.woocommerce ul.products {
+  padding: 15px; }
+  .woocommerce ul.products li.product {
+    width: 100%; }
+    .woocommerce ul.products li.product a img {
+      border: 5px solid #AB9862; }
+    .woocommerce ul.products li.product a h3 {
+      font-size: 15pt;
+      color: #AB9862;
+      font-weight: bold; }
+    .woocommerce ul.products li.product a .price {
+      color: white;
+      font-size: 12pt; }
+    @media (min-width: 768px) {
+      .woocommerce ul.products li.product {
+        width: 48%; } }
+    @media (min-width: 992px) {
+      .woocommerce ul.products li.product {
+        width: 22.05%; } }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  background: black; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  background: #1a0a53;
+  border-bottom-color: #1a0a53; }
+
+.woocommerce div.product div.images img {
+  border: 5px solid #AB9862; }
 
 .wrapper-navbar .container {
   margin: 0 15px 0 15px; }
 
+.wrapper-navbar #socialNavMenu.social-container {
+  display: none; }
+  @media (min-width: 992px) {
+    .wrapper-navbar #socialNavMenu.social-container {
+      display: inline; } }
+  .wrapper-navbar #socialNavMenu.social-container .navbar-nav {
+    flex-direction: row; }
+    .wrapper-navbar #socialNavMenu.social-container .navbar-nav li {
+      border-bottom: none; }
+      .wrapper-navbar #socialNavMenu.social-container .navbar-nav li a {
+        font-size: 21pt;
+        padding: 0 0.5rem; }
+
+#desktop-nav .desktop-navbar .navbar-nav li {
+  border-right: 1px solid #AB9862; }
+  #desktop-nav .desktop-navbar .navbar-nav li:first-child {
+    border-left: 1px solid #AB9862; }
+  #desktop-nav .desktop-navbar .navbar-nav li a {
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 40px;
+    color: #AB9862; }
+
 @media (min-width: 992px) {
-  .desktop-navbar .navbar-nav {
+  #desktop-nav .desktop-navbar .navbar-nav {
     flex-direction: row; } }
 
 @media (max-width: 1199px) {
-  .desktop-navbar .navbar-nav {
+  #desktop-nav .desktop-navbar .navbar-nav {
     display: none !important; } }
 
 @media (min-width: 992px) {
   #navbarNavDropdown {
     display: none !important; } }
+
+.navbar {
+  background: white; }
+  @media (min-width: 992px) {
+    .navbar {
+      padding: 0; } }
+  .navbar .navbar-toggler {
+    border: 1px solid #1a0a53;
+    color: #1a0a53; }
+  .navbar li {
+    border-bottom: 1px solid #1a0a53; }
+    .navbar li:last-child {
+      border-bottom: none; }
 
 .cart-box {
   position: absolute;
@@ -9435,7 +9532,34 @@ aside.widget {
   right: 4%;
   width: 25%;
   max-width: 100px;
-  padding: 4px 10px; }
+  padding: 4px 10px;
+  background: #AB9862;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  text-align: center; }
+  .cart-box a {
+    color: inherit; }
+
+#pre-footer.wrapper {
+  background: #AB9862; }
+
+#page-wrapper.wrapper {
+  margin-top: 0;
+  background-image: linear-gradient(to bottom, #280f81 0%, #1a0a53 100%);
+  background-repeat: repeat-x; }
+
+#wrapper-footer.wrapper {
+  background: #140841;
+  color: #AB9862; }
+
+#content.container {
+  padding-top: 15px;
+  color: white; }
+
+.btn-outline-primary, .wpcf7 input[type=submit] {
+  background-image: linear-gradient(to bottom, #7852b2 0%, #1a0a53 100%);
+  background-repeat: repeat-x;
+  color: #AB9862; }
 
 /*
 * Use existing Bootstrap 4 classes and

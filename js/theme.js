@@ -5386,3 +5386,12 @@ var Popover = function ($) {
 		}, false );
 	}
 })();
+
+var $ = jQuery;
+
+$('p.woocommerce-result-count').addClass('col-sm-12');
+$('form.woocommerce-ordering').addClass('col-sm-12');
+
+$('.menu-item-16 a').html('<i class="fa fa-facebook-square" aria-hidden="true"></i>');
+$('.menu-item-17 a').html('<i class="fa fa-instagram" aria-hidden="true"></i>');
+$('.menu-item-18 a').html('<i class="fa fa-twitter-square" aria-hidden="true"></i>');

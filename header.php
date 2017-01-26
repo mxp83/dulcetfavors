@@ -34,43 +34,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 		'understrap' ); ?></a>
 		
 		<div class="cart-box">
-			<a class="cart-custom-link" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
+			<a class="cart-custom-link" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <?php echo sprintf ( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
 		</div>
 
 
-		<nav class="navbar navbar-toggleable-md  navbar-inverse bg-inverse">
+		<nav class="navbar navbar-toggleable-md">
 
-			<div class="<?php echo esc_html( $container ); ?>">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    				<span class="fa fa-bars"></span>
+ 				 </button>
+ 				 
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'social',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'socialNavDropdown',
+						'container_class' => 'social-container',
+						'container_id'    => 'socialNavMenu',
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
-						'menu_id'         => 'social-menu',
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    				<span class="navbar-toggler-icon"></span>
- 				 </button>
-
- 				 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-tagret="#socialNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Connect with Us">
- 				 	<span class="fa fa-comment"></span>
- 				 </button>
- -->
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
-					   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-						<?php bloginfo( 'name' ); ?>
-					</a>
-					
-					<?php } else {
-						the_custom_logo();
-					} ?>
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
@@ -90,14 +74,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- .wrapper-navbar end -->
 
 <div class="jumbotron jumbotron-fluid">
+	
 	<div class="container">
 		<div class="col-sm-12">
-			<h1>Dulcet Favors</h1>
-			<h2>They looks so pretty, you won't want to unwrap them!</h2>
+			<img class="logo" src="<?php bloginfo('template_url') ?>/img/logo.svg">
 		</div>		
 	</div>
+	<div class="jumbo-overlay"></div>
 </div>
-<div class="container">
+<div class="container" id="desktop-nav">
 	<?php wp_nav_menu(
 		array(
 			'theme_location'  => 'primary',
